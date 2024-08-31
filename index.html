@@ -10,8 +10,7 @@
          var myHeading = document.querySelector("h1");
          const url = 'https://img.shields.io/badge/any_text-you_like-blue?style=for-the-badge';
          const response = await fetch(url);
-<!--         const text = await response.text();-->
-         const text = "await response.text()";
+         const text = await response.text();
          console.log("hh")
          myHeading.textContent = text;
        }
@@ -19,7 +18,7 @@
   </head>
   <body>
     <h1>Mozilla is cool</h1>
-    <button type="button" onclick="getCountCommits">ghbdtn</button>
+    <button type="button" onclick="getCountCommits()">ghbdtn</button>
     <img src="images/firefox-icon.png" alt="The Firefox logo: a flaming fox surrounding the Earth.">
 
     <p>At Mozilla, we’re a global community of</p>
