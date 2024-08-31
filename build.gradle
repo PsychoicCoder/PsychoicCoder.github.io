@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+}
+
+group = 'org.harbingers_of_chaos'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    implementation("org.apache.tomcat:tomcat-catalina:11.0.0-M24")
+    implementation("jakarta.servlet:jakarta.servlet-api:6.1.0")
+    implementation("com.googlecode.json-simple:json-simple:1.1.1")
+
+
+}
+
+test {
+    useJUnitPlatform()
+}
