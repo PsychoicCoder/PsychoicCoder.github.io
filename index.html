@@ -5,16 +5,6 @@
     <title>My test page</title>
     <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
     <link href="styles/style.css" rel="stylesheet" type="text/css">
-    <script>
-      async function getCountCommits() {
-         var myHeading = document.querySelector("h1");
-         const url = 'https://img.shields.io/badge/any_text-you_like-blue?style=for-the-badge';
-         const response = await fetch(url);
-         const text = await response.text();
-         console.log("hh")
-         myHeading.textContent = text;
-       }
-    </script>
   </head>
   <body>
     <h1>Mozilla is cool</h1>
@@ -33,4 +23,14 @@
 
     <p>Read the <a href="https://www.mozilla.org/en-US/about/manifesto/">Mozilla Manifesto</a> to learn even more about the values and principles that guide the pursuit of our mission.</p>
   </body>
+  <script>
+    async function getCountCommits() {
+       var myHeading = document.querySelector("h1");
+       const url = 'https://img.shields.io/badge/any_text-you_like-blue?style=for-the-badge';
+       const response = await fetch(url);
+       const text = await response.text();
+       console.log("hh")
+       myHeading.textContent = text;
+     }
+  </script>
 </html>
