@@ -1,33 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>My test page</title>
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
-    <link href="styles/style.css" rel="stylesheet" type="text/css">
-  </head>
-  <body>
-    <h1>Mozilla is cool</h1>
-    <img src="images/firefox-icon.png" alt="The Firefox logo: a flaming fox surrounding the Earth.">
+<!--  <head>-->
+<!--    <meta charset="utf-8">-->
+<!--    <title>My test page</title>-->
+<!--    <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">-->
+<!--    <link href="styles/style.css" rel="stylesheet" type="text/css">-->
+<!--  </head>-->
+<!--  <body>-->
+<!--    <h1>Mozilla is cool</h1>-->
+<!--    <img src="images/firefox-icon.png" alt="The Firefox logo: a flaming fox surrounding the Earth.">-->
 
-    <p>At Mozilla, we’re a global community of</p>
+<!--    <p>At Mozilla, we’re a global community of</p>-->
 
-    <ul> <!-- changed to list in the tutorial -->
-      <li>technologists</li>
-      <li>thinkers</li>
-      <li>builders</li>
-    </ul>
+<!--    <ul> &lt;!&ndash; changed to list in the tutorial &ndash;&gt;-->
+<!--      <li>technologists</li>-->
+<!--      <li>thinkers</li>-->
+<!--      <li>builders</li>-->
+<!--    </ul>-->
 
-    <p>working together to keep the Internet alive and accessible, so people worldwide can be informed contributors and creators of the Web. We believe this act of human collaboration across an open platform is essential to individual growth and our collective future.</p>
+<!--    <p>working together to keep the Internet alive and accessible, so people worldwide can be informed contributors and creators of the Web. We believe this act of human collaboration across an open platform is essential to individual growth and our collective future.</p>-->
 
-    <p>Read the <a href="https://www.mozilla.org/en-US/about/manifesto/">Mozilla Manifesto</a> to learn even more about the values and principles that guide the pursuit of our mission.</p>
-  </body>
+<!--    <p>Read the <a href="https://www.mozilla.org/en-US/about/manifesto/">Mozilla Manifesto</a> to learn even more about the values and principles that guide the pursuit of our mission.</p>-->
+<!--  </body>-->
 <script type="module" >
-  var myHeading = document.querySelector("h1");
-const url = 'https://img.shields.io/badge/any_text-you_like-blue?style=for-the-badge';
-const response = await fetch(url);
-const text = await response.text();
-console.log("hh")
-myHeading.textContent = text;
+//   var myHeading = document.querySelector("h1");
+// const url = 'https://img.shields.io/badge/any_text-you_like-blue?style=for-the-badge';
+// const response = await fetch(url);
+// const text = await response.text();
+// console.log("hh")
+// myHeading.textContent = text;
+  var svg = document.getElementsByTagName('svg')[0]; //Get svg element
+  var newElement = document.createElementNS("http://www.w3.org/2000/svg", 'path'); //Create a path in SVG's namespace
+  newElement.setAttribute("d","M 0 0 L 100 100"); //Set path's data
+  newElement.style.stroke = "#000"; //Set stroke colour
+  newElement.style.strokeWidth = "5px"; //Set stroke width
+  svg.appendChild(newElement);
 </script>
 </html>
